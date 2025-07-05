@@ -12,9 +12,10 @@ import {
 interface LanguageSelectorProps {
   currentLang: string;
   onLanguageChange: (lang: string) => void;
+  isDarkMode?: boolean;
 }
 
-export const LanguageSelector = ({ currentLang, onLanguageChange }: LanguageSelectorProps) => {
+export const LanguageSelector = ({ currentLang, onLanguageChange, isDarkMode = true }: LanguageSelectorProps) => {
   const languages = [
     { code: 'en', name: 'English', flag: '🇺🇸' },
     { code: 'es', name: 'Español', flag: '🇪🇸' },
@@ -29,17 +30,20 @@ export const LanguageSelector = ({ currentLang, onLanguageChange }: LanguageSele
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-gray-700">
+        <Button 
+          variant="outline" 
+          className="bg-black border-black text-white hover:bg-gray-900 hover:border-gray-800"
+        >
           <Globe className="w-4 h-4 mr-2" />
           {currentLanguage?.flag} {currentLanguage?.name}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="bg-gray-800 border-gray-700" align="end">
+      <DropdownMenuContent className="bg-black border-gray-700 z-50" align="end">
         {languages.map((language) => (
           <DropdownMenuItem
             key={language.code}
             onClick={() => onLanguageChange(language.code)}
-            className="text-gray-300 hover:bg-gray-700 focus:bg-gray-700 cursor-pointer"
+            className="text-white hover:bg-gray-800 focus:bg-gray-800 cursor-pointer"
           >
             <span className="mr-2">{language.flag}</span>
             {language.name}
