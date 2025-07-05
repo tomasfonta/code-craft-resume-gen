@@ -95,38 +95,28 @@ const Index = () => {
                 />
               </div>
               
-              <div className="pt-8 flex items-start gap-8">
-                <div className="flex-1">
-                  <div className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'} mb-2`}>// {t.welcomeMessage}</div>
-                  <h1 className={`text-4xl md:text-5xl font-bold mb-4 ${isDarkMode ? 'text-green-400' : 'text-green-600'}`}>
-                    Tomás Fontanarrosa
-                  </h1>
-                  <h2 className={`text-xl md:text-2xl ${isDarkMode ? 'text-blue-400' : 'text-blue-600'} mb-6`}>
-                    {t.title}
-                  </h2>
-                  
-                  <div className="flex flex-wrap gap-4 mb-6">
-                    <div className={`flex items-center gap-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                      <Mail className="w-4 h-4" />
-                      <span>fontanarrosatomas@gmail.com</span>
-                    </div>
-                    <div className={`flex items-center gap-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                      <Phone className="w-4 h-4" />
-                      <span>+34649006569</span>
-                    </div>
-                    <div className={`flex items-center gap-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                      <MapPin className="w-4 h-4" />
-                      <span>Palma de Mallorca, Spain</span>
-                    </div>
-                  </div>
-                </div>
+              <div className="pt-8">
+                <div className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'} mb-2`}>// {t.welcomeMessage}</div>
+                <h1 className={`text-4xl md:text-5xl font-bold mb-4 ${isDarkMode ? 'text-green-400' : 'text-green-600'}`}>
+                  Tomás Fontanarrosa
+                </h1>
+                <h2 className={`text-xl md:text-2xl ${isDarkMode ? 'text-blue-400' : 'text-blue-600'} mb-6`}>
+                  {t.title}
+                </h2>
                 
-                <div className="flex-shrink-0">
-                  <img 
-                    src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=200&h=200&fit=crop&crop=face" 
-                    alt="Tomás Fontanarrosa" 
-                    className="w-32 h-32 rounded-full object-cover border-4 border-green-400"
-                  />
+                <div className="flex flex-wrap gap-4 mb-6">
+                  <div className={`flex items-center gap-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                    <Mail className="w-4 h-4" />
+                    <span>fontanarrosatomas@gmail.com</span>
+                  </div>
+                  <div className={`flex items-center gap-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                    <Phone className="w-4 h-4" />
+                    <span>+34649006569</span>
+                  </div>
+                  <div className={`flex items-center gap-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                    <MapPin className="w-4 h-4" />
+                    <span>Palma de Mallorca, Spain</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -376,31 +366,13 @@ const Index = () => {
               </Card>
             </div>
           </section>
-
-          {/* Contact Section */}
-          <section className={`transition-all duration-1000 delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <Card className={cardClasses}>
-              <CardContent className="p-8 text-center">
-                <h3 className={`text-2xl font-bold mb-6 ${isDarkMode ? 'text-purple-400' : 'text-purple-600'}`}>
-                  {t.contactTitle}
-                </h3>
-                <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'} mb-6`}>
-                  {t.contactDescription}
-                </p>
-                <Button className={`${isDarkMode ? 'bg-purple-600 hover:bg-purple-500' : 'bg-purple-700 hover:bg-purple-600'} text-white`}>
-                  <Mail className="w-4 h-4 mr-2" />
-                  {t.getInTouch}
-                </Button>
-              </CardContent>
-            </Card>
-          </section>
         </main>
       </div>
 
       {/* Footer */}
       <footer className={`border-t ${isDarkMode ? 'border-gray-700' : 'border-gray-200'} py-8 mt-12`}>
         <div className={`container mx-auto px-6 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-          <p>&copy; 2024 Tomás Fontanarrosa. {t.footerText}</p>
+          <p>&copy; 2025 Tomás Fontanarrosa. Make Bitcoin Great Again</p>
         </div>
       </footer>
     </div>
