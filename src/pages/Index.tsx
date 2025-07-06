@@ -8,6 +8,8 @@ import { TechStack } from '@/components/TechStack';
 import { translations } from '@/lib/translations';
 import html2pdf from 'html2pdf.js';
 
+const { BASE_URL } = import.meta.env;
+
 const Index = () => {
   const [currentLang, setCurrentLang] = useState('en');
   const [isVisible, setIsVisible] = useState(false);
@@ -35,12 +37,12 @@ const Index = () => {
     setIsDarkMode(!isDarkMode);
   };
 
-  const themeClasses = isDarkMode 
-    ? 'bg-gray-900 text-gray-100' 
+  const themeClasses = isDarkMode
+    ? 'bg-gray-900 text-gray-100'
     : 'bg-white text-gray-900';
-  
-  const cardClasses = isDarkMode 
-    ? 'bg-gray-800 border-gray-700' 
+
+  const cardClasses = isDarkMode
+    ? 'bg-gray-800 border-gray-700'
     : 'bg-gray-50 border-gray-200';
 
   return (
@@ -56,16 +58,16 @@ const Index = () => {
               onClick={toggleTheme}
               variant="outline"
               size="icon"
-              className={`${isDarkMode ? 'border-gray-600 text-gray-300 hover:bg-gray-700' : 'border-gray-300 text-gray-700 hover:bg-gray-100'}`}
+              className={`${isDarkMode ? 'border-gray-600 text-gray-600 hover:bg-gray-100' : 'border-gray-600 text-gray-700 hover:bg-gray-700'}`}
             >
               {isDarkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </Button>
-            <LanguageSelector 
-              currentLang={currentLang} 
+            <LanguageSelector
+              currentLang={currentLang}
               onLanguageChange={setCurrentLang}
               isDarkMode={isDarkMode}
             />
-            <Button 
+            <Button
               onClick={handleDownloadPDF}
               className={`${isDarkMode ? 'bg-green-600 hover:bg-green-500' : 'bg-green-700 hover:bg-green-600'} text-white font-semibold`}
             >
@@ -86,15 +88,15 @@ const Index = () => {
                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
               </div>
-              
+
               <div className="absolute top-4 right-4">
-                <img 
-                  src="/lovable-uploads/f246eb4e-592d-4877-887d-a4a8c73afb77.png" 
-                  alt="Logo" 
+                <img
+                  src={`${BASE_URL}lovable-uploads/f246eb4e-592d-4877-887d-a4a8c73afb77.png`}
+                  alt="Logo"
                   className={`w-16 h-16 ${isDarkMode ? 'filter invert' : ''}`}
                 />
               </div>
-              
+
               <div className="pt-8">
                 <div className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'} mb-2`}>// {t.welcomeMessage}</div>
                 <h1 className={`text-4xl md:text-5xl font-bold mb-4 ${isDarkMode ? 'text-green-400' : 'text-green-600'}`}>
@@ -103,7 +105,7 @@ const Index = () => {
                 <h2 className={`text-xl md:text-2xl ${isDarkMode ? 'text-blue-400' : 'text-blue-600'} mb-6`}>
                   {t.title}
                 </h2>
-                
+
                 <div className="flex flex-wrap gap-4 mb-6">
                   <div className={`flex items-center gap-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                     <Mail className="w-4 h-4" />
@@ -155,7 +157,7 @@ const Index = () => {
                   {t.experienceTitle}
                   <span className={`${isDarkMode ? 'text-gray-500' : 'text-gray-400'} ml-2`}>() &#123;</span>
                 </h3>
-                
+
                 <div className="pl-6">
                   <div className="space-y-8">
                     <div className="border-l-2 border-blue-400/30 pl-6 relative">
@@ -261,7 +263,7 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className={`${isDarkMode ? 'text-gray-500' : 'text-gray-400'} mt-6`}>&#125;</div>
               </CardContent>
             </Card>
@@ -276,7 +278,7 @@ const Index = () => {
                   {t.educationTitle}
                   <span className={`${isDarkMode ? 'text-gray-500' : 'text-gray-400'} ml-2`}>&#123;</span>
                 </h3>
-                
+
                 <div className="pl-6">
                   <div className="space-y-6">
                     <div className="border-l-2 border-purple-400/30 pl-6 relative">
@@ -307,7 +309,7 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className={`${isDarkMode ? 'text-gray-500' : 'text-gray-400'} mt-6`}>&#125;</div>
               </CardContent>
             </Card>
@@ -323,7 +325,7 @@ const Index = () => {
                     {t.languagesTitle}
                     <span className={`${isDarkMode ? 'text-gray-500' : 'text-gray-400'} ml-2`}>= &#123;</span>
                   </h3>
-                  
+
                   <div className="pl-6 space-y-4">
                     <div className="flex items-center justify-between">
                       <span className={isDarkMode ? 'text-gray-300' : 'text-gray-700'}>Spanish</span>
@@ -342,7 +344,7 @@ const Index = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className={`${isDarkMode ? 'text-gray-500' : 'text-gray-400'} mt-6`}>&#125;;</div>
                 </CardContent>
               </Card>
@@ -354,13 +356,13 @@ const Index = () => {
                     {t.hobbiesTitle}
                     <span className={`${isDarkMode ? 'text-gray-500' : 'text-gray-400'} ml-2`}>= [</span>
                   </h3>
-                  
+
                   <div className="pl-6">
                     <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed`}>
                       Passionate about running and staying physically active through outdoor sports such as kitesurfing and camping. Enthusiastic about motorcycle maintenance and repair, combining hands-on mechanical skills with a love for two-wheel adventure. A strong interest in wildlife and nature exploration, often seeking opportunities to disconnect and reconnect with the outdoors. Additionally, I actively follow geopolitics, with a focus on global affairs, economic trends, and their influence on technology and international markets.
                     </p>
                   </div>
-                  
+
                   <div className={`${isDarkMode ? 'text-gray-500' : 'text-gray-400'} mt-6`}>];</div>
                 </CardContent>
               </Card>

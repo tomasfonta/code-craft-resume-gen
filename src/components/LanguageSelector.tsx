@@ -30,9 +30,9 @@ export const LanguageSelector = ({ currentLang, onLanguageChange, isDarkMode = t
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button 
-          variant="outline" 
-          className="bg-black border-black text-white hover:bg-gray-900 hover:border-gray-800"
+        <Button
+          variant="outline"
+          className="bg-black border-black text-white hover:bg-gray-300 hover:border-gray-300"
         >
           <Globe className="w-4 h-4 mr-2" />
           {currentLanguage?.flag} {currentLanguage?.name}
@@ -43,7 +43,7 @@ export const LanguageSelector = ({ currentLang, onLanguageChange, isDarkMode = t
           <DropdownMenuItem
             key={language.code}
             onClick={() => onLanguageChange(language.code)}
-            className="text-white hover:bg-gray-800 focus:bg-gray-800 cursor-pointer"
+            className="text-white hover:bg-gray-300 focus:bg-gray-4 00 cursor-pointer"
           >
             <span className="mr-2">{language.flag}</span>
             {language.name}
