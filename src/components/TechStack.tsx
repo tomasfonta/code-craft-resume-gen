@@ -93,6 +93,7 @@ export const TechStack = ({ title, isDarkMode = true }: TechStackProps) => {
 		{ name: 'Decision Making', level: 4 },
 		{ name: 'Adaptability', level: 5 },
 		{ name: 'Effective Time Management', level: 4 },
+		{ name: 'Pressure tolerance', level: 5 },
 
 	];
 

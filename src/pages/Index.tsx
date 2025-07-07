@@ -22,7 +22,7 @@ const Index = () => {
 	const t = translations[currentLang];
 
 	const handleDownloadPDF = () => {
-		const pdfUrl = 'public/tomas-fontanarrosa-cv.pdf';
+		const pdfUrl = '/tomas-fontanarrosa-cv.pdf';
 		const link = document.createElement('a');
 		link.href = pdfUrl;
 		link.setAttribute('download', 'tomas-fontanarrosa-cv.pdf'); // Set the desired filename for the download
