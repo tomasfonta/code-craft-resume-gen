@@ -7,7 +7,6 @@ import { Download, Mail, Phone, MapPin, Sun, Moon } from 'lucide-react';
 import { LanguageSelector } from '@/components/LanguageSelector';
 import { TechStack } from '@/components/TechStack';
 import { translations } from '@/lib/translations';
-import html2pdf from 'html2pdf.js';
 
 const { BASE_URL } = import.meta.env;
 
@@ -23,16 +22,13 @@ const Index = () => {
 	const t = translations[currentLang];
 
 	const handleDownloadPDF = () => {
-		const element = document.getElementById('resume-content');
-		const opt = {
-			margin: 1,
-			filename: 'tomas-fontanarrosa-cv.pdf',
-			image: { type: 'jpeg', quality: 0.98 },
-			html2canvas: { scale: 2 },
-			jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-		};
-
-		html2pdf().set(opt).from(element).save();
+		const pdfUrl = '/tomas-fontanarrosa-cv.pdf';
+		const link = document.createElement('a');
+		link.href = pdfUrl;
+		link.setAttribute('download', 'tomas-fontanarrosa-cv.pdf'); 
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
 	};
 
 	const toggleTheme = () => {
