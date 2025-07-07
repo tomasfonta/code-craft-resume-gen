@@ -55,7 +55,7 @@ export const TechStack = ({ title, isDarkMode = true }: TechStackProps) => {
 		},
 		{
 			name: 'AWS',
-			logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg',
+			logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
 			color: 'text-orange-300',
 			bg: isDarkMode ? 'bg-orange-300/20' : 'bg-orange-100'
 		},

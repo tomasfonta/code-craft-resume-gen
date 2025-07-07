@@ -6,7 +6,6 @@ import { Download, Mail, Phone, MapPin, Sun, Moon } from 'lucide-react';
 import { LanguageSelector } from '@/components/LanguageSelector';
 import { TechStack } from '@/components/TechStack';
 import { translations } from '@/lib/translations';
-import html2pdf from 'html2pdf.js';
 
 const { BASE_URL } = import.meta.env;
 
@@ -56,7 +55,7 @@ const Index = () => {
 							onClick={toggleTheme}
 							variant="outline"
 							size="icon"
-							className={`${isDarkMode ? 'border-gray-600 text-gray-600 hover:bg-gray-100' : 'border-gray-600 text-gray-700 hover:bg-gray-700'}`}
+							className={`${isDarkMode ? 'border-gray-600 text-gray-900 hover:bg-gray-800 hover:text-gray-200' : 'border-gray-600 text-gray-700 hover:bg-gray-700  hover:text-gray-200'}`}
 						>
 							{isDarkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
 						</Button>
@@ -156,12 +155,12 @@ const Index = () => {
 										<div className="border-l-2 border-blue-400/30 pl-6 relative">
 											<div className="absolute -left-2 top-0 w-4 h-4 bg-blue-400 rounded-full"></div>
 											<div className="mb-4">
-												<h4 className="text-xl font-semibold text-white mb-2">Senior Software Developer at eDreams ODIGEO</h4>
+												<h4 className={`${isDarkMode ? 'text-white' : 'text-gray'} text-xl font-semibold  mb-2`}>Senior Software Developer at eDreams ODIGEO</h4>
 												<div className="flex flex-wrap gap-2 mb-2">
 													<Badge variant="secondary" className="bg-gray-700 text-gray-300">Feb 2022 - Present</Badge>
 													<Badge variant="secondary" className="bg-gray-700 text-gray-300">Barcelona</Badge>
 												</div>
-												<p className="text-gray-300 mb-4">
+												<p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'} mb-4`}>
 													Working as a Java Backend Software Developer at eDreams ODIGEO, a major online travel agency based in Barcelona, Spain. Involved in the development of scalable, high-performance backend services using Java and microservices architecture. Actively contribute to translating business ideas into practical and actionable technical initiatives, ensuring alignment between product vision and engineering execution.
 												</p>
 												<div className="flex flex-wrap gap-2">
@@ -176,12 +175,12 @@ const Index = () => {
 										<div className="border-l-2 border-blue-400/30 pl-6 relative">
 											<div className="absolute -left-2 top-0 w-4 h-4 bg-blue-400 rounded-full"></div>
 											<div className="mb-4">
-												<h4 className="text-xl font-semibold text-white mb-2">Full Stack Developer at Primero Systems</h4>
+												<h4 className={`${isDarkMode ? 'text-white' : 'text-gray'} text-xl font-semibold  mb-2`}>Full Stack Developer at Primero Systems</h4>
 												<div className="flex flex-wrap gap-2 mb-2">
 													<Badge variant="secondary" className="bg-gray-700 text-gray-300">Dec 2020 - Jun 2022</Badge>
 													<Badge variant="secondary" className="bg-gray-700 text-gray-300">Remote (San Diego)</Badge>
 												</div>
-												<p className="text-gray-300 mb-4">
+												<p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'} mb-4`}>
 													Worked as a Full-Stack Developer focusing primarily on the development of a back-office system for Midwest Laboratories, a client based in Nebraska, USA. The application was built using .NET Core 5, React, and PostgreSQL, supporting critical administrative and operational processes within the laboratory.
 												</p>
 												<div className="flex flex-wrap gap-2">
@@ -196,13 +195,13 @@ const Index = () => {
 										<div className="border-l-2 border-blue-400/30 pl-6 relative">
 											<div className="absolute -left-2 top-0 w-4 h-4 bg-blue-400 rounded-full"></div>
 											<div className="mb-4">
-												<h4 className="text-xl font-semibold text-white mb-2">Full Stack Developer at OZ</h4>
+												<h4 className={`${isDarkMode ? 'text-white' : 'text-gray'} text-xl font-semibold  mb-2`}>Full Stack Developer at OZ</h4>
 												<div className="flex flex-wrap gap-2 mb-2">
 													<Badge variant="secondary" className="bg-gray-700 text-gray-300">Aug 2019 - Nov 2020</Badge>
 													<Badge variant="secondary" className="bg-gray-700 text-gray-300">Remote (Florida)</Badge>
 												</div>
-												<p className="text-gray-300 mb-4">
-													Part of the development team for SandDollar, a comprehensive application developed for Royal Caribbean. The project consists of several interconnected modules designed to manage all commercial operations on a private island in the Bahamas, including retail, dining, reservations, and guest services.
+												<p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'} mb-4`}>
+													Part of the development team for SandDollar, an application developed for Royal Caribbean. The project consists of several interconnected modules designed to manage all commercial operations on a private island in the Bahamas, including retail, dining, reservations, and guest services.
 												</p>
 												<div className="flex flex-wrap gap-2">
 													<Badge className="bg-green-600/20 text-green-400">Java</Badge>
@@ -217,12 +216,12 @@ const Index = () => {
 										<div className="border-l-2 border-blue-400/30 pl-6 relative">
 											<div className="absolute -left-2 top-0 w-4 h-4 bg-blue-400 rounded-full"></div>
 											<div className="mb-4">
-												<h4 className="text-xl font-semibold text-white mb-2">Full Stack Developer at Crucijuegos</h4>
+												<h4 className={`${isDarkMode ? 'text-white' : 'text-gray'} text-xl font-semibold  mb-2`}>Full Stack Developer at Crucijuegos</h4>
 												<div className="flex flex-wrap gap-2 mb-2">
 													<Badge variant="secondary" className="bg-gray-700 text-gray-300">Dec 2017 - Dec 2018</Badge>
 													<Badge variant="secondary" className="bg-gray-700 text-gray-300">Rosario, Argentina</Badge>
 												</div>
-												<p className="text-gray-300 mb-4">
+												<p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'} mb-4`}>
 													Collaborated within a 4-person team to develop a desktop application using magnetic card technology for accurate employee working hours monitoring. Additionally, developed a web-based administration system to configure sales stands and generate detailed commercial financial reports.
 												</p>
 												<div className="flex flex-wrap gap-2">
@@ -238,12 +237,12 @@ const Index = () => {
 										<div className="border-l-2 border-blue-400/30 pl-6 relative">
 											<div className="absolute -left-2 top-0 w-4 h-4 bg-blue-400 rounded-full"></div>
 											<div className="mb-4">
-												<h4 className="text-xl font-semibold text-white mb-2">Junior Java Developer at Globant</h4>
+												<h4 className={`${isDarkMode ? 'text-white' : 'text-gray'} text-xl font-semibold  mb-2`}>Junior Java Developer at Globant</h4>
 												<div className="flex flex-wrap gap-2 mb-2">
 													<Badge variant="secondary" className="bg-gray-700 text-gray-300">Oct 2016 - Nov 2017</Badge>
 													<Badge variant="secondary" className="bg-gray-700 text-gray-300">Rosario, Argentina</Badge>
 												</div>
-												<p className="text-gray-300 mb-4">
+												<p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'} mb-4`}>
 													Worked as a staff augmentation resource on a project with EMC², contributing to the development and maintenance of their corporate website, www.emc.com. Focused on backend development using Java EE and Adobe Experience Manager (AEM) as the CMS platform.
 												</p>
 												<div className="flex flex-wrap gap-2">
@@ -282,12 +281,12 @@ const Index = () => {
 										<div className="border-l-2 border-purple-400/30 pl-6 relative">
 											<div className="absolute -left-2 top-0 w-4 h-4 bg-purple-400 rounded-full"></div>
 											<div className="mb-4">
-												<h4 className="text-xl font-semibold text-white mb-2">Universidad Tecnológica Nacional</h4>
+												<h4 className={`${isDarkMode ? 'text-white' : 'text-gray'} text-xl font-semibold  mb-2`}>Universidad Tecnológica Nacional</h4>
 												<div className="flex flex-wrap gap-2 mb-2">
 													<Badge variant="secondary" className="bg-gray-700 text-gray-300">Jan 2013 - Jan 2020</Badge>
 													<Badge variant="secondary" className="bg-gray-700 text-gray-300">Rosario</Badge>
 												</div>
-												<p className="text-gray-300">
+												<p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'} mb-4`}>
 													Information Systems Engineering in Systems Engineering
 												</p>
 											</div>
@@ -296,11 +295,11 @@ const Index = () => {
 										<div className="border-l-2 border-purple-400/30 pl-6 relative">
 											<div className="absolute -left-2 top-0 w-4 h-4 bg-purple-400 rounded-full"></div>
 											<div className="mb-4">
-												<h4 className="text-xl font-semibold text-white mb-2">ComunidadIT</h4>
+												<h4 className={`${isDarkMode ? 'text-white' : 'text-gray'} text-xl font-semibold  mb-2`}>ComunidadIT</h4>
 												<div className="flex flex-wrap gap-2 mb-2">
 													<Badge variant="secondary" className="bg-gray-700 text-gray-300">Jan 2017 - Jan 2017</Badge>
 												</div>
-												<p className="text-gray-300">
+												<p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'} mb-4`}>
 													UX & UI Design Course
 												</p>
 											</div>
