@@ -53,7 +53,7 @@ const Index = () => {
 			<header className={`sticky top-0 z-50 ${isDarkMode ? 'bg-gray-900/80' : 'bg-white/80'} backdrop-blur-sm border-b ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}>
 				<div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
 					<div className={`${isDarkMode ? 'text-green-400' : 'text-green-600'} font-bold text-lg sm:text-xl`}>
-						&gt; resume.dev
+						&gt; tomasfontanarrosa.com
 					</div>
 					<div className="flex flex-wrap items-center gap-2 sm:gap-4">
 						<Button
@@ -94,7 +94,7 @@ const Index = () => {
 
 							<div className="absolute top-3 sm:top-4 right-3 sm:right-4">
 								<img
-									src="/lovable-uploads/f246eb4e-592d-4877-887d-a4a8c73afb77.png"
+									src="/logo.png"
 									alt="Logo"
 									className={`w-12 h-12 sm:w-16 sm:h-16 ${isDarkMode ? '' : 'filter invert'}`}
 								/>
